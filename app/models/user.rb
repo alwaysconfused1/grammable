@@ -1,7 +1,9 @@
 class User < ApplicationRecord
- has_many :grams
- has_many :messages # Include default devise modules. Others available are:
+  # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :grams
+
 end
