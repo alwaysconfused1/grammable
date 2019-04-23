@@ -13,6 +13,8 @@ gem 'jquery-rails'
 
 gem 'simple_form'
 
+gem 'devise'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
