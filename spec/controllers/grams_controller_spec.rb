@@ -4,11 +4,11 @@ RSpec.describe GramsController, type: :controller do
 
   describe "grams#destroy action" do
     it "shouldn't allow users who didn't create the gram to destroy it" do 
-        gram = FactoryBot.create(:gram)
-        user = FactoryBot.create(:user)
-        sign_in user
-        delete :destroy, params: { id: gram.id }
-        expect(response).to have_http_status(:forbidden)
+      gram = FactoryBot.create(:gram)
+      user = FactoryBot.create(:user)
+      sign_in user
+      delete :destroy, params: { id: gram.id }
+      expect(response).to have_http_status(:forbidden)
     end
 
 
@@ -39,11 +39,11 @@ RSpec.describe GramsController, type: :controller do
 
   describe "grams#update action" do 
     it "shouldn't let users who didn't create the gram update it" do
-gram = FactoryBot.create(:gram)
-user = FactoryBot.create(:user)
-sign_in user
-patch :update, params: { id: gram.id, gram: {message: 'wahoo' } }
-expect(response).to have_http_status(:forbidden)
+      gram = FactoryBot.create(:gram)
+      user = FactoryBot.create(:user)
+      sign_in user
+      patch :update, params: { id: gram.id, gram: {message: 'wahoo' } }
+      expect(response).to have_http_status(:forbidden)
     end
 
 
@@ -158,7 +158,13 @@ expect(response).to have_http_status(:forbidden)
       user = FactoryBot.create(:user)
       sign_in user
 
-      post :create, params: { gram: { message: 'Hello!' } }
+      post :create, params: { 
+        gram: { 
+          message: 'Hello!',
+          picture: fixture_file_upload("/picture.png", 'image/png')
+        }
+      }
+      
       expect(response).to redirect_to root_path
 
       gram = Gram.last
