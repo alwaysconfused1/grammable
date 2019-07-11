@@ -1,24 +1,29 @@
-# README
+# [Grammable](https://grammable-wilson-horrell.herokuapp.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###### *Wilson Horrell is a full-stack web developer and technology enthusiast. You can find more information about him through his [portfolio](https://wilsonhorrell.netlify.com/) or contact him directly at the email address wilsonhorrell@gmail.com*
 
-Things you may want to cover:
+An Instagram clone that was built using industry-standard, test-driven development following numerous red/green/refactor cycles.
 
-* Ruby version
+#### Built using:
+- Ruby v2.5.3
+- HTML5
+- CSS
+- Bootstrap 4.3.1
+- JQuery
+- Popper JS
+- Font Awesome
 
-* System dependencies
 
-* Configuration
+#### Ruby Gems used:
+- Kaminari
+- Carrierwave
+- Figaro
+- Simple-Form
+- Devise
+- Spring Commands R-spec
 
-* Database creation
 
-* Database initialization
+### Home Page:
+<img width="481" alt="Screen Shot 2019-07-11 at 2 53 10 PM" src="https://user-images.githubusercontent.com/44242436/61080884-a311b700-a3eb-11e9-8cf7-41726c9c375d.png">
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
